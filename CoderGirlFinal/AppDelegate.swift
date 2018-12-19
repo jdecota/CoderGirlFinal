@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // didFinishLaunchingWithOptions
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("Did Finish Launching called")
         return true
     }
 
@@ -54,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
+        print("persistent container called")
 
 // Data Model Name
         let container = NSPersistentContainer(name: "CoderGirlFinal")
@@ -71,8 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  Check the error message to determine what the actual problem was.
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
+                print("unresolver error created")
             }
         })
+        print("returned container")
         return container
     }()
 
@@ -83,11 +87,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
+                print("Tried context- save")
                 try context.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
+                print("NSError")
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
