@@ -5,7 +5,6 @@
 //  Created by Jennifer DeCota on 12/12/18.
 //  Copyright © 2018 iOS Class. All rights reserved.
 //
-
 import Foundation
 import UIKit
 
@@ -75,8 +74,10 @@ class ListViewController: UITableViewController {
             print ("Add Item Pressed")
             // add to item array
             self.itemArray.append(textField.text!)
-                    //force unwrap so will give blank if "blank"
+                   //force unwrap so will give blank if "blank"
                     // OR can create a default value
+            print(textField.text!)
+            self.tableView.reloadData()
         }
         
         // add text field to alert
@@ -87,6 +88,7 @@ class ListViewController: UITableViewController {
             alertTextField.placeholder = "Create New Item"
             print("alertTextField.text EMPTY because empty until when button pressed")
             textField = alertTextField
+           
         }
             
         alert.addAction(action)
