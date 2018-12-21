@@ -16,7 +16,7 @@ class ListViewController: UITableViewController {
     
     //Mark: Create list array variable of strings that will be data for table view cells
     
-    let itemArray = ["item1", "item2", "item3"]
+    var itemArray = ["item1", "item2", "item3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,42 @@ class ListViewController: UITableViewController {
 
     }
     
+    //Mark: Add New Item
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        // Add Alert Pop Up when button pressed
+        let alert = UIAlertController(title: "Add New List Item", message: "", preferredStyle: .alert)
+        
+        // Create UIAlert Action
+        let action = UIAlertAction(title: "Add", style: .default)  // creat closure for handler:  //<#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+        {(action) in
+            // what happens when user clicks Add Item button on our UIAlert
+            print ("Add Item Pressed")
+            // add to item array
+            self.itemArray.append(textField.text!)
+                    //force unwrap so will give blank if "blank"
+                    // OR can create a default value
+        }
+        
+        // add text field to alert
+        //alert.addTextField(configurationHandler: <#T##((UITextField) -> Void)?##((UITextField) -> Void)?##(UITextField) -> Void#>)
+        // name the textField - alertTextField
+        alert.addTextField { (alertTextField) in
+            //placeholder is the "greyed out" text shown
+            alertTextField.placeholder = "Create New Item"
+            print("alertTextField.text EMPTY because empty until when button pressed")
+            textField = alertTextField
+        }
+            
+        alert.addAction(action)
+        
+        //Now SHOW Alert
+//present(viewControllerToPresent: UIViewController), animated: Bool, completion: (() -> Void)?
+        // viewController.. (alert) animated: true   completion: nil
+        present(alert, animated: true, completion: nil)
+        
+    }
     
 
     
