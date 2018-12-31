@@ -1,15 +1,9 @@
-//
-//  FirstViewController.swift
+// FirstViewController.swift
 //  CoderGirlFinal
-//
-//  Created by Jennifer DeCota on 12/30/18.
-//  Copyright © 2018 iOS Class. All rights reserved.
-//
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class FirstViewController: UIViewController, dataToDelegate {
     
     @IBOutlet weak var VcOneLabel: UILabel!
     @IBOutlet weak var TextFieldOne: UITextField!
@@ -18,37 +12,31 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
+    //MARK: Segue from button pressed
     @IBAction func sendVcOnePressed(_ sender: UIButton) {
         
         performSegue(withIdentifier: "sendToSecondVC", sender: self)
     }
-    
+        // Pass the selected object to the new view controller.
+            // Get the new view controller using segue.destination.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sendToSecondVC" {
             let secondSecondVC = segue.destination as! SecondViewController
             
             secondSecondVC.data = TextFieldOne.text!
-            //secondReceivingVC.delegate = self
+            secondSecondVC.delegate = self
         }
     }
-    func dataReceived(data: String) {
+
+    //MARK:  Requirement For Conforming to Delegate
+    func dataFromVcTwo(data: String) {
         VcOneLabel.text = data
     }
 }
 
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 

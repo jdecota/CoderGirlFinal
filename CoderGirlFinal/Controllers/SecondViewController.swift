@@ -8,13 +8,17 @@
 
 import UIKit
 
+protocol dataToDelegate {
+    func dataFromVcTwo(data : String)
+}
+
 class SecondViewController: UIViewController {
 
     
     @IBOutlet weak var TextFieldTwo: UITextField!
     @IBOutlet weak var LabelTwo: UILabel!
     var data = ""
-    
+    var delegate : dataToDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +28,10 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func VcTwoButtonPressed(_ sender: UIButton) {
+        
+        delegate?.dataFromVcTwo(data: TextFieldTwo.text!)
+        dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
