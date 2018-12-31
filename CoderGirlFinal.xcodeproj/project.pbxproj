@@ -16,6 +16,8 @@
 		85B654FC21BEFCA800F4BC75 /* CoderGirlFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B654FB21BEFCA800F4BC75 /* CoderGirlFinalUITests.swift */; };
 		85B6550A21C1E5C800F4BC75 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6550921C1E5C800F4BC75 /* ListViewController.swift */; };
 		85B6550C21C1ED5400F4BC75 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6550B21C1ED5400F4BC75 /* MyCustomCell.swift */; };
+		85C3B1B421D9CC4000AAE60E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3B1B321D9CC3F00AAE60E /* FirstViewController.swift */; };
+		85C3B1B621D9CC5100AAE60E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3B1B521D9CC5100AAE60E /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		85B654FD21BEFCA800F4BC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85B6550921C1E5C800F4BC75 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		85B6550B21C1ED5400F4BC75 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		85C3B1B321D9CC3F00AAE60E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		85C3B1B521D9CC5100AAE60E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 			children = (
 				85B6550B21C1ED5400F4BC75 /* MyCustomCell.swift */,
 				85B6550921C1E5C800F4BC75 /* ListViewController.swift */,
+				85C3B1B321D9CC3F00AAE60E /* FirstViewController.swift */,
+				85C3B1B521D9CC5100AAE60E /* SecondViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C3B1B621D9CC5100AAE60E /* SecondViewController.swift in Sources */,
+				85C3B1B421D9CC4000AAE60E /* FirstViewController.swift in Sources */,
 				85B654E121BEFCA500F4BC75 /* CoderGirlFinal.xcdatamodeld in Sources */,
 				85B654D921BEFCA500F4BC75 /* AppDelegate.swift in Sources */,
 				85B6550C21C1ED5400F4BC75 /* MyCustomCell.swift in Sources */,
