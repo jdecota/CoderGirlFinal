@@ -10,13 +10,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    
+    @IBOutlet weak var TextFieldTwo: UITextField!
+    @IBOutlet weak var LabelTwo: UILabel!
+    var data = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        LabelTwo.text = data
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func VcTwoButtonPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
