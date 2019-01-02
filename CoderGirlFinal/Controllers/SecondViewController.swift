@@ -33,5 +33,25 @@ class SecondViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func getListButtonPressed(_ sender: UIButton) {
+        /* delegate?.dataFromVcTwo(data: TextFieldTwo.text!)
+        */
+        performSegue(withIdentifier: "goToListVc", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToListVc" {
+        
+        let secondListVc = segue.destination as! ListViewController
+        
+        print("segue.destination equals so data can be entered here" )
+        //secondListVc.itemArray =
 
+        dismiss(animated: true, completion: nil)
+        }
+    }
+        // Mark: NETWORKING
+    
+    
 }
