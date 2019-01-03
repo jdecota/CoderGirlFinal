@@ -1,5 +1,132 @@
 //  ListViewController.swift  //  CoderGirlFinalCreated by Jennifer DeCota on 12/12/18. //  Copyright © 2018 iOS Class. All rights reserved.
+
+import UIKit
+import Foundation
+
+struct FlickerJSON: Codable {
+    struct FlickrItem: Codable {
+        let media: Dictionary<String, String>
+        let title: String
+    }
+    let items: [FlickrItem]
+}
+
+struct FlckrPhoto {
+    let image: UIImage
+    let title: String
+}
+
+class FlickrTableViewController: UITableViewController {
+    
+    var photos: [FlckrPhoto] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadFlickrImage()
+    }
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return photos.count
+    }
+    
+    func loadFlickrImage() {
+        
+        // Create a configuration
+        
+        let configuration = URLSessionConfiguration.ephemeral
+        
+        // Create a session
+        
+        let session = URLSession(configuration: configuration)
+        
+        // Setup the url
+        let url = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1")!
+        
+        // Create the task
+        
+        let task = session.dataTask(with: url) {
+            
+            (data, response, error) in
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let data = data else {
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let media = try decoder.decode(FlickerJSON.self, from: data)
+                for item in media.items {
+                    if let imageURL = item.media["m"] {
+                        let url = URL(string: imageURL)!
+                        let imageData = try Data(contentsOf: url)
+                        if let image = UIImage(data: imageData) {
+                            let flickrImage = FlckrPhoto(image: image, title: item.title)
+                            self.photos.append(flickrImage)
+                        }
+                    }
+                }
+                let queue = OperationQueue.main
+                queue.addOperation {
+                    self.tableView.reloadData()
+                }
+            } catch {
+                print("Error info: \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FlickrCell", for: indexPath)
+        
+        cell.imageView?.image = photos[indexPath.row].image
+        cell.textLabel?.text = photos[indexPath.row].title
+        
+        return cell
+    }
+    
+    
+    //Mark:  didSelectRowAt method to run when table view cell is tapped
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row) //prints the row number
+        //print(photos[indexPath.row]) //prints the item in that index of the array
+        performSegue(withIdentifier: "PhotoSegue", sender: photos[indexPath.row])
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PhotoSegue" {
+                print("preparForSegue called")
+            guard let cell = sender as? UITableViewCell,
+                let photoViewController = segue.destination as? PhotoViewController,
+                let indexPath = tableView.indexPath(for: cell)
+         else {
+                return
+            }
+            let flickrPhoto = photos[indexPath.row]
+            photoViewController.photo = flickrPhoto.image
+            
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
 //
+/*
 import UIKit
 import Foundation
 
@@ -36,6 +163,7 @@ class ListViewController: UITableViewController {
         cell.textLabel?.text = itemArray[indexPath.row]  //current row of current index path
         return cell
     }
+ */
 //                        // cell created with dequeueReusableCell,
 //                        // cell populated with text from current row
 //                        //  cell is expected output of UITableViewCell
@@ -137,4 +265,4 @@ class ListViewController: UITableViewController {
         //
         //    return cell
         //}
-}
+

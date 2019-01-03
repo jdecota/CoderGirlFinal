@@ -112,10 +112,10 @@ class SecondViewController: UIViewController {
         
         if segue.identifier == "goToListVc" {
         
-        let secondListVc = segue.destination as! ListViewController
+        //let secondListVc = segue.destination as! ListViewController
         
         print("segue.destination equals so data can be entered here" )
-        //secondListVc.itemArray =
+        ////secondListVc.itemArray =
         }
     }
 

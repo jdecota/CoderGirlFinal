@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85945CFC21DD651D003A5A00 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85945CFB21DD651D003A5A00 /* FourthViewController.swift */; };
+		85945CFE21DD72C9003A5A00 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85945CFD21DD72C9003A5A00 /* FifthViewController.swift */; };
+		85945D0021DD9484003A5A00 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85945CFF21DD9484003A5A00 /* PhotoViewController.swift */; };
 		85B654D921BEFCA500F4BC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B654D821BEFCA500F4BC75 /* AppDelegate.swift */; };
 		85B654DE21BEFCA500F4BC75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B654DC21BEFCA500F4BC75 /* Main.storyboard */; };
 		85B654E121BEFCA500F4BC75 /* CoderGirlFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85B654DF21BEFCA500F4BC75 /* CoderGirlFinal.xcdatamodeld */; };
@@ -14,7 +17,7 @@
 		85B654E621BEFCA800F4BC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B654E421BEFCA800F4BC75 /* LaunchScreen.storyboard */; };
 		85B654F121BEFCA800F4BC75 /* CoderGirlFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B654F021BEFCA800F4BC75 /* CoderGirlFinalTests.swift */; };
 		85B654FC21BEFCA800F4BC75 /* CoderGirlFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B654FB21BEFCA800F4BC75 /* CoderGirlFinalUITests.swift */; };
-		85B6550A21C1E5C800F4BC75 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6550921C1E5C800F4BC75 /* ListViewController.swift */; };
+		85B6550A21C1E5C800F4BC75 /* FlickrTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6550921C1E5C800F4BC75 /* FlickrTableViewController.swift */; };
 		85B6550C21C1ED5400F4BC75 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6550B21C1ED5400F4BC75 /* MyCustomCell.swift */; };
 		85C3B1B421D9CC4000AAE60E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3B1B321D9CC3F00AAE60E /* FirstViewController.swift */; };
 		85C3B1B621D9CC5100AAE60E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3B1B521D9CC5100AAE60E /* SecondViewController.swift */; };
@@ -48,6 +51,9 @@
 		2095E52F50B3C335D36000F8 /* Pods-CoderGirlFinalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoderGirlFinalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoderGirlFinalUITests/Pods-CoderGirlFinalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		47ADC4185F0D2D1BA8C535B2 /* Pods_CoderGirlFinalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoderGirlFinalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4821D93E82B4080303BD2A53 /* Pods-CoderGirlFinalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoderGirlFinalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoderGirlFinalTests/Pods-CoderGirlFinalTests.release.xcconfig"; sourceTree = "<group>"; };
+		85945CFB21DD651D003A5A00 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		85945CFD21DD72C9003A5A00 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		85945CFF21DD9484003A5A00 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		85B654D521BEFCA500F4BC75 /* CoderGirlFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoderGirlFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B654D821BEFCA500F4BC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85B654DD21BEFCA500F4BC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +67,7 @@
 		85B654F721BEFCA800F4BC75 /* CoderGirlFinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoderGirlFinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B654FB21BEFCA800F4BC75 /* CoderGirlFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderGirlFinalUITests.swift; sourceTree = "<group>"; };
 		85B654FD21BEFCA800F4BC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85B6550921C1E5C800F4BC75 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		85B6550921C1E5C800F4BC75 /* FlickrTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrTableViewController.swift; sourceTree = "<group>"; };
 		85B6550B21C1ED5400F4BC75 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		85C3B1B321D9CC3F00AAE60E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		85C3B1B521D9CC5100AAE60E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -176,8 +182,12 @@
 			children = (
 				85C3B1B321D9CC3F00AAE60E /* FirstViewController.swift */,
 				85C3B1B521D9CC5100AAE60E /* SecondViewController.swift */,
-				85B6550921C1E5C800F4BC75 /* ListViewController.swift */,
+				85B6550921C1E5C800F4BC75 /* FlickrTableViewController.swift */,
 				85B6550B21C1ED5400F4BC75 /* MyCustomCell.swift */,
+				85945CFB21DD651D003A5A00 /* FourthViewController.swift */,
+				85945CFD21DD72C9003A5A00 /* FifthViewController.swift */,
+				85C3B1BF21D9E02C00AAE60E /* CoinList.swift */,
+				85945CFF21DD9484003A5A00 /* PhotoViewController.swift */,
 				85C3B1C121D9E4F800AAE60E /* ResponseModels */,
 			);
 			path = Controllers;
@@ -202,7 +212,6 @@
 		85C3B1C121D9E4F800AAE60E /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
-				85C3B1BF21D9E02C00AAE60E /* CoinList.swift */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -434,13 +443,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85945CFE21DD72C9003A5A00 /* FifthViewController.swift in Sources */,
 				85C3B1B621D9CC5100AAE60E /* SecondViewController.swift in Sources */,
 				85C3B1B421D9CC4000AAE60E /* FirstViewController.swift in Sources */,
 				85B654E121BEFCA500F4BC75 /* CoderGirlFinal.xcdatamodeld in Sources */,
 				85B654D921BEFCA500F4BC75 /* AppDelegate.swift in Sources */,
+				85945CFC21DD651D003A5A00 /* FourthViewController.swift in Sources */,
 				85B6550C21C1ED5400F4BC75 /* MyCustomCell.swift in Sources */,
 				85C3B1C021D9E02C00AAE60E /* CoinList.swift in Sources */,
-				85B6550A21C1E5C800F4BC75 /* ListViewController.swift in Sources */,
+				85B6550A21C1E5C800F4BC75 /* FlickrTableViewController.swift in Sources */,
+				85945D0021DD9484003A5A00 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

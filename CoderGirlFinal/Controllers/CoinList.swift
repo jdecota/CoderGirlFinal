@@ -9,6 +9,25 @@
 //// Mark: 3  Create references of new type Coin to be somewhat isolated from the rest of the application, so will be a NESTED type inside of CoinList
 //// Mark: 4 Write Coin parsing TEST in testing
 //
+
+//struct coinListModel : Decodable {
+//
+//    var response: String
+//    var message: String
+//    var baseImageURL : URL?
+//    var baseLinkURL : URL?
+//    var data : Data
+//
+//    //Modeling the Coins Response
+//    enum CodingKeys : String, CodingKey {
+//
+//        case response = "Response"
+//        case message = "Message"
+//        case baseImageURL = "BaseImageURL"
+//        case baseLinkURL = "BaseLinkURL"
+//        case data = "Data"
+//    }
+//}
 //struct CoinList : Decodable {
 //
 //    var response: String
