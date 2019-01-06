@@ -1,6 +1,5 @@
 // FirstViewController.swift
 //  CoderGirlFinal
-
 import UIKit
 import Foundation
 import Alamofire
